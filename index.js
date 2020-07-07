@@ -7,7 +7,8 @@ const mongoose = require('mongoose');
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
-
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
 
 mongoose.connect('mongodb:127.0.0.1:27017/branchingTesting', {
     useNewUrlParser: true,
