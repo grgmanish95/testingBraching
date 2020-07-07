@@ -10,6 +10,9 @@ app.use(express.urlencoded({extended: false}));
 app.use('/category', categoryRouter);
 app.use('/job',auth.verifyUser ,jobRouter);
 app.use('/user',userRouter);
+app.use('/category', categoryRouter);
+app.use('/job',auth.verifyUser ,jobRouter);
+app.use('/user',userRouter);
 
 mongoose.connect('mongodb:127.0.0.1:27017/branchingTesting', {
     useNewUrlParser: true,
