@@ -6,6 +6,10 @@ const mongoose = require('mongoose');
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
+app.use('/user',userRouter);
+app.use('/category', categoryRouter);
+app.use('/job',auth.verifyUser ,jobRouter);
+app.use('/user',userRouter);
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
